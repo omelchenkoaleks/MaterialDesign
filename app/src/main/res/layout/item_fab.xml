@@ -3,19 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorBackground"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:padding="16dp">
 
-    <Button
-        android:id="@+id/fab_button"
+    <TextView
+        android:id="@+id/fab_text_veiw"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/fab"
-        android:background="@drawable/button_shape"
-        android:onClick="onClick"
-        style="@style/styleButton"
+        android:background="@drawable/fab_list_shape"
+        style="@style/styleFabList"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
