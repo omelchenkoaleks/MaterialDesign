@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="._003_getbase_fab.GetbaseFabActivity">
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/floating_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        fab:fab_addButtonColorNormal="@color/colorAccent"
+        fab:fab_addButtonPlusIconColor="#ffff">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_1_child"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            fab:fab_addButtonColorNormal="@color/colorPrimary"
+            fab:fab_icon="@drawable/ic_check_white"
+            fab:fab_size="normal"
+            fab:fab_title="First Button" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
