@@ -2,4 +2,5 @@
     <string name="app_name">Material Design</string>
     <string name="fab">fab</string>
     <string name="empty_text" />
+    <string name="melnykov_fab">Melnykov Fab</string>
 </resources>

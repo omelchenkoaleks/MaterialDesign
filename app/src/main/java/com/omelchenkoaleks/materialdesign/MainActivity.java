@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.omelchenkoaleks.materialdesign._001_fab.FabActivity;
+import com.omelchenkoaleks.materialdesign._002_melnykov_fab.MelnykovFabActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.fab_button:
                 Intent fabIntent = new Intent(this, FabActivity.class);
                 startActivity(fabIntent);
+                break;
+
+            case R.id.melnykov_fab_button:
+                Intent melnykovFabIntent = new Intent(this, MelnykovFabActivity.class);
+                startActivity(melnykovFabIntent);
                 break;
         }
     }
