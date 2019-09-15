@@ -18,4 +18,9 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
+    <style name="menu_label_style">
+        <item name="android:background">@android:drawable/toast_frame</item>
+        <item name="android:color">#fafafa</item>
+    </style>
+
 </resources>

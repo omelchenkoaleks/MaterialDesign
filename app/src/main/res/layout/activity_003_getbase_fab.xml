@@ -17,7 +17,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         fab:fab_addButtonColorNormal="@color/colorAccent"
-        fab:fab_addButtonPlusIconColor="#ffff">
+        fab:fab_addButtonPlusIconColor="#ffff"
+        fab:fab_labelStyle="@style/menu_label_style">
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_1_child"
