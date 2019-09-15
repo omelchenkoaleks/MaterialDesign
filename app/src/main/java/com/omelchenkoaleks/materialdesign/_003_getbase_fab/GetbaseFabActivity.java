@@ -1,6 +1,7 @@
 package com.omelchenkoaleks.materialdesign._003_getbase_fab;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,11 +11,15 @@ import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.omelchenkoaleks.materialdesign.R;
 
 public class GetbaseFabActivity extends AppCompatActivity {
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_003_getbase_fab);
+
+        mToolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
 
         final FloatingActionButton fab = findViewById(R.id.fab_1_child);
         fab.setOnClickListener(new View.OnClickListener() {

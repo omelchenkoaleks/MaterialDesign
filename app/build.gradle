@@ -33,4 +33,6 @@ dependencies {
     // https://github.com/futuresimple/android-floating-action-button
     implementation 'com.getbase:floatingactionbutton:1.10.1'
 
+    // https://github.com/mikepenz/MaterialDrawer/tree/v6.1.2
+    implementation "com.mikepenz:materialdrawer:6.1.2"
 }

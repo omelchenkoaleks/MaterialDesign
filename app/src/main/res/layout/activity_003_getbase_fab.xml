@@ -8,6 +8,10 @@
     android:background="@color/colorBackground"
     tools:context="._003_getbase_fab.GetbaseFabActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
     <com.getbase.floatingactionbutton.FloatingActionsMenu
         android:id="@+id/floating_menu"
         android:layout_width="wrap_content"
