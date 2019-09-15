@@ -9,6 +9,7 @@ import android.view.View;
 import com.omelchenkoaleks.materialdesign._001_fab.FabActivity;
 import com.omelchenkoaleks.materialdesign._002_melnykov_fab.MelnykovFabActivity;
 import com.omelchenkoaleks.materialdesign._003_getbase_fab.GetbaseFabActivity;
+import com.omelchenkoaleks.materialdesign._004_toolbar.ToolbarActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.getbase_fab_button:
                 Intent getbaseFabIntent = new Intent(this, GetbaseFabActivity.class);
                 startActivity(getbaseFabIntent);
+                break;
+
+            case R.id.toolbar_button:
+                Intent toolbarIntent = new Intent(this, ToolbarActivity.class);
+                startActivity(toolbarIntent);
                 break;
         }
     }

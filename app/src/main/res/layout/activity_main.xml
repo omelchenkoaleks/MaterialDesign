@@ -49,4 +49,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/melnykov_fab_button" />
 
+    <Button
+        android:id="@+id/toolbar_button"
+        style="@style/styleButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_shape"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getbase_fab_button" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

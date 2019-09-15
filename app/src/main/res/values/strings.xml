@@ -4,4 +4,5 @@
     <string name="empty_text" />
     <string name="melnykov_fab">Melnykov Fab</string>
     <string name="getbase_fab">Getbase Fab</string>
+    <string name="toolbar">Toolbar</string>
 </resources>
