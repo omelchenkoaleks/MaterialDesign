@@ -30,6 +30,7 @@ public class MelnykovFabActivity extends AppCompatActivity {
         listView.setAdapter(mAdapter);
 
         FloatingActionButton fab = findViewById(R.id.melnykov_fab);
+        fab.attachToListView(listView);
     }
 
     private List<Number> getNumbers() {
