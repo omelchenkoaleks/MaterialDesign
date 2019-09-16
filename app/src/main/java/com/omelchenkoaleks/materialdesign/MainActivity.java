@@ -11,6 +11,7 @@ import com.omelchenkoaleks.materialdesign._002_melnykov_fab.MelnykovFabActivity;
 import com.omelchenkoaleks.materialdesign._003_getbase_fab.GetbaseFabActivity;
 import com.omelchenkoaleks.materialdesign._004_toolbar.ToolbarActivity;
 import com.omelchenkoaleks.materialdesign._005_navigation_drawer.NavigationDrawerActivity;
+import com.omelchenkoaleks.materialdesign._006_snackbar_coord_layout.SnackbarActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,6 +48,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.navigation_drawer_button:
                 Intent navigationDrawerIntent = new Intent(this, NavigationDrawerActivity.class);
                 startActivity(navigationDrawerIntent);
+                break;
+
+            case R.id.snackbar_button:
+                Intent snackbarIntent = new Intent(this, SnackbarActivity.class);
+                startActivity(snackbarIntent);
                 break;
         }
     }
