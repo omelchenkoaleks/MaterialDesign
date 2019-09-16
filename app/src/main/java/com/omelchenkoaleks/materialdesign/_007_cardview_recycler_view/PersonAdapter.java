@@ -1,5 +1,6 @@
 package com.omelchenkoaleks.materialdesign._007_cardview_recycler_view;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +33,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PersonViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final PersonViewHolder holder, int position) {
         final int index = position;
 
         // при долгом нажатии удаляем карточку с данными одного человека
@@ -42,6 +43,16 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
                 mPersonList.remove(index);
                 notifyDataSetChanged();
                 return true;
+            }
+        });
+
+        // при коротком нажатии выделяем цветом
+        holder.mCardView.setOnClickListener(new View.OnClickListener() {
+            int color;
+            @Override
+            public void onClick(View v) {
+                color = (color != Color.RED) ? Color.RED : Color.WHITE;
+                holder.mCardView.setCardBackgroundColor(color);
             }
         });
 
