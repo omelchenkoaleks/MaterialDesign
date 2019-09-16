@@ -35,7 +35,6 @@ public class MelnykovFabActivity extends AppCompatActivity {
 
     private List<Number> getNumbers() {
         List<Number> numbers = new ArrayList<>();
-
         for (int i = 0; i < 20; i++) {
             numbers.add(new Number(i + 1));
         }

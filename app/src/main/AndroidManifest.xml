@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="._006_snackbar_coord_layout.SnackbarActivity"></activity>
+        <activity android:name="._007_cardview_recycler_view.PersonActivity"></activity>
+        <activity android:name="._006_snackbar_coord_layout.SnackbarActivity" />
         <activity android:name="._005_navigation_drawer.NavigationDrawerActivity" />
         <activity android:name="._004_toolbar.ToolbarActivity" />
         <activity android:name="._003_getbase_fab.GetbaseFabActivity" />

@@ -12,6 +12,7 @@ import com.omelchenkoaleks.materialdesign._003_getbase_fab.GetbaseFabActivity;
 import com.omelchenkoaleks.materialdesign._004_toolbar.ToolbarActivity;
 import com.omelchenkoaleks.materialdesign._005_navigation_drawer.NavigationDrawerActivity;
 import com.omelchenkoaleks.materialdesign._006_snackbar_coord_layout.SnackbarActivity;
+import com.omelchenkoaleks.materialdesign._007_cardview_recycler_view.PersonActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.snackbar_button:
                 Intent snackbarIntent = new Intent(this, SnackbarActivity.class);
                 startActivity(snackbarIntent);
+                break;
+
+            case R.id.card_recycler_button:
+                Intent cardRecyclerIntent = new Intent(this, PersonActivity.class);
+                startActivity(cardRecyclerIntent);
                 break;
         }
     }

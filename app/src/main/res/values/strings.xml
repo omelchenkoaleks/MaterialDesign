@@ -7,4 +7,8 @@
     <string name="toolbar">Toolbar</string>
     <string name="navigation_drawer">Navigation Drawer</string>
     <string name="snackbar">Snackbar</string>
+    <string name="cardview_recyclerview">CardView RecyclerView</string>
+    <string name="write_name">Write name:</string>
+    <string name="write_age">Write age:</string>
+    <string name="your_position">Your position:</string>
 </resources>
