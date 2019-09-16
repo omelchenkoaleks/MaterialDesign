@@ -19,7 +19,9 @@ public class GetbaseFabActivity extends AppCompatActivity {
         setContentView(R.layout.activity_003_getbase_fab);
 
         mToolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(mToolbar);
+        if (mToolbar != null) {
+            setSupportActionBar(mToolbar);
+        }
 
         final FloatingActionButton fab = findViewById(R.id.fab_1_child);
         fab.setOnClickListener(new View.OnClickListener() {

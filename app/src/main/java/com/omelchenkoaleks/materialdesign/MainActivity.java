@@ -10,6 +10,7 @@ import com.omelchenkoaleks.materialdesign._001_fab.FabActivity;
 import com.omelchenkoaleks.materialdesign._002_melnykov_fab.MelnykovFabActivity;
 import com.omelchenkoaleks.materialdesign._003_getbase_fab.GetbaseFabActivity;
 import com.omelchenkoaleks.materialdesign._004_toolbar.ToolbarActivity;
+import com.omelchenkoaleks.materialdesign._005_navigation_drawer.NavigationDrawerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.toolbar_button:
                 Intent toolbarIntent = new Intent(this, ToolbarActivity.class);
                 startActivity(toolbarIntent);
+                break;
+
+            case R.id.navigation_drawer_button:
+                Intent navigationDrawerIntent = new Intent(this, NavigationDrawerActivity.class);
+                startActivity(navigationDrawerIntent);
                 break;
         }
     }
