@@ -65,7 +65,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
 
     public void removeItem(int position) {
         mPersonList.remove(position);
-        notifyItemRemoved(position);
+        notifyDataSetChanged();
     }
 
     public void addData(Person person) {
