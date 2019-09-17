@@ -33,7 +33,28 @@ public class PersonActivity extends AppCompatActivity implements View.OnClickLis
         mLinearLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLinearLayoutManager);
         mPeople = initData();
-        mAdapter = new PersonAdapter(mPeople, getLayoutInflater());
+
+        mAdapter = new PersonAdapter(mPeople, getLayoutInflater(), new PersonAdapter.PersonViewHolder.LongClickListener() {
+            @Override
+            public boolean onLongClick(View view, final int position) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(PersonActivity.this)
+                        .setTitle("Remove")
+                        .setMessage("Are you really want to remove this item?")
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                mAdapter.removeItem(position);
+                            }
+                        })
+                        .setNegativeButton("No", null);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+
+                return true;
+            }
+        });
+
         mRecyclerView.setAdapter(mAdapter);
 
         mFab = findViewById(R.id.fab_person);

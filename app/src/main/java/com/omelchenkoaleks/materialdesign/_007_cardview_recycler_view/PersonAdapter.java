@@ -18,10 +18,13 @@ import java.util.List;
 public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonViewHolder>{
     private List<Person> mPersonList;
     private LayoutInflater mLayoutInflater;
+    private PersonViewHolder.LongClickListener mLongClickListener;
 
-    public PersonAdapter(List<Person> personList, LayoutInflater layoutInflater) {
+    public PersonAdapter(List<Person> personList, LayoutInflater layoutInflater,
+                         PersonViewHolder.LongClickListener longClickListener) {
         mPersonList = personList;
         mLayoutInflater = layoutInflater;
+        mLongClickListener = longClickListener;
     }
 
     @NonNull
@@ -33,16 +36,14 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final PersonViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final PersonViewHolder holder, final int position) {
         final int index = position;
 
         // при долгом нажатии удаляем карточку с данными одного человека
         holder.mCardView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                mPersonList.remove(index);
-                notifyDataSetChanged();
-                return true;
+                return mLongClickListener.onLongClick(v, index);
             }
         });
 
@@ -60,6 +61,11 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
         String age = String.valueOf(mPersonList.get(position).getAge());
         holder.mAgeTextView.setText(age);
         holder.mPositionTextView.setText(mPersonList.get(position).getPosition());
+    }
+
+    public void removeItem(int position) {
+        mPersonList.remove(position);
+        notifyItemRemoved(position);
     }
 
     public void addData(Person person) {
@@ -89,6 +95,10 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
             mNameTextView = itemView.findViewById(R.id.name_text_view);
             mAgeTextView = itemView.findViewById(R.id.age_text_view);
             mPositionTextView = itemView.findViewById(R.id.position);
+        }
+
+        public interface LongClickListener {
+            boolean onLongClick(View view, int position);
         }
     }
 }
